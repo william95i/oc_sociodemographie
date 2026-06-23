@@ -1,0 +1,16 @@
+name: "oc_sociodemographie"
+version: "1.1.1"
+config-version: 3
+
+profile: "default"
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+models:
+  oc_sociodemographie:
+    +materialized: view

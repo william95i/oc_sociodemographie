@@ -1,0 +1,90 @@
+version: 2
+
+sources:
+  - name: oc_raw
+    database: OC_RAW
+    schema: PUBLIC
+
+    tables:
+      - name: students
+        description: "Table brute des étudiants."
+
+        columns:
+          - name: USER_ID
+            description: "Identifiant technique unique."
+
+          - name: PATH_CATEGORY_NAME
+            description: "Catégorie du parcours."
+
+          - name: AGE_GROUP
+            description: "Classe d'âge."
+
+          - name: GENDER
+            description: "Genre déclaré."
+
+          - name: REGION
+            description: "Région."
+
+          - name: YEAR_PATH_STARTED
+            description: "Année de début."
+
+      - name: POPULATION
+        description: "Données INSEE 2024 brutes importées depuis Excel (population par région, sexe et tranche d'âge)."
+
+        columns:
+          - name: REGION
+            description: "Nom de la région."
+
+          - name: ENSEMBLE_0_19
+            description: "Population totale 0-19 ans."
+
+          - name: ENSEMBLE_20_39
+            description: "Population totale 20-39 ans."
+
+          - name: ENSEMBLE_40_59
+            description: "Population totale 40-59 ans."
+
+          - name: ENSEMBLE_60_74
+            description: "Population totale 60-74 ans."
+
+          - name: ENSEMBLE_75_PLUS
+            description: "Population totale 75 ans et plus."
+
+          - name: ENSEMBLE_TOTAL
+            description: "Population totale tous âges."
+
+          - name: HOMMES_0_19
+            description: "Population masculine 0-19 ans."
+
+          - name: HOMMES_20_39
+            description: "Population masculine 20-39 ans."
+
+          - name: HOMMES_40_59
+            description: "Population masculine 40-59 ans."
+
+          - name: HOMMES_60_74
+            description: "Population masculine 60-74 ans."
+
+          - name: HOMMES_75_PLUS
+            description: "Population masculine 75 ans et plus."
+
+          - name: HOMMES_TOTAL
+            description: "Population masculine totale."
+
+          - name: FEMMES_0_19
+            description: "Population féminine 0-19 ans."
+
+          - name: FEMMES_20_39
+            description: "Population féminine 20-39 ans."
+
+          - name: FEMMES_40_59
+            description: "Population féminine 40-59 ans."
+
+          - name: FEMMES_60_74
+            description: "Population féminine 60-74 ans."
+
+          - name: FEMMES_75_PLUS
+            description: "Population féminine 75 ans et plus."
+
+          - name: FEMMES_TOTAL
+            description: "Population féminine totale."
