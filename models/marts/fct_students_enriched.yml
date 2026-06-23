@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: fct_students_enriched
+    description: >
+      Table finale d'analyse sociodémographique enrichie avec les données INSEE.
+
+    columns:
+      - name: YEAR
+        description: "Année de début du parcours."
+        tests:
+          - not_null
+
+      - name: REGION
+        description: "Région de résidence de l'étudiant."
+        tests:
+          - not_null
+
+      - name: AGE_GROUP
+        description: "Tranche d'âge normalisée."
+        tests:
+          - not_null
+
+      - name: GENDER
+        description: "Genre de l'étudiant."
+        tests:
+          - accepted_values:
+              values: ["HOMME", "FEMME", "INCONNU"]
+
+      - name: STUDENTS_COUNT
+        description: "Nombre d'étudiants dans ce segment."
+        tests:
+          - not_null
+
+      - name: POPULATION_INSEE
+        description: "Population INSEE correspondante."
+
+      - name: STUDENT_POPULATION_RATIO
+        description: "Ratio étudiants / population INSEE."
+
+      - name: PART_POPULATION_PCT
+        description: "% de la population française représentée par la région."
+
+      - name: PART_STUDENTS_PCT
+        description: "% des étudiants OC provenant de cette région."
+
+      - name: ECART_REPRESENTATION_PCT
+        description: "Écart de représentation (% étudiants - % population)."
